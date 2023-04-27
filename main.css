@@ -7,7 +7,7 @@ body{
 
 main{
     margin-top: 12vh;
-    width: 80vw;
+    width: 85vw;
     height: auto;
     background-color: #232323;
     border: 1.5px solid #5d5d5d;
@@ -33,11 +33,26 @@ header{
     grid-template-columns: repeat(10, 1fr);
 }
 
-.header-grid{
-    grid-column: 10;
+.hdr-flex-center{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.profile{
+    grid-column: 10;
+}
+
+.log_out{
+    grid-column: 9;
+}
+
+.lg-lnk{
+    text-align: center;
+    text-decoration: none;
+    font-size: 32px;
+    background-color: #1f1f1f;
+    color: white;
 }
 
 .main_container{
@@ -71,7 +86,9 @@ header{
 .bckgrDmGr{
     background-color: dimgray;
     border-radius: 10px;
-    width: auto;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
 }
 .test-name{
     grid-row: 1;
@@ -181,13 +198,13 @@ header{
 .menu__box {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 10vh);
+    grid-template-rows: repeat(10, 10vh);
     align-items: center;
     position: fixed;
     top: 0;
     left: -100%;
-    width: 35vw;
-    height: auto;
+    width: auto;
+    height: 100vh;
     margin: 0;
     padding-top: 80px;
     padding-left: 0;
@@ -195,7 +212,6 @@ header{
     background-color: #404041;
     transition-duration: .25s;
     color: #ffffff;
-    border-radius: 30px;
     border-right: 2px solid #676565;
 }
 .menu__item {
@@ -213,13 +229,6 @@ header{
     color: #ffffff;
 }
 
-.log_out{
-    grid-row: 8;
-    height: 100%;
-    text-align: center;
-    border-radius: 30px;
-    background-color: #1f1f1f;
-}
 .hamburger-menu{
     display: flex;
     align-items: center;
