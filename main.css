@@ -75,7 +75,7 @@ header{
     justify-items: center;
     height: auto;
     background-color: #404041;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 400;
     white-space: nowrap;
     border-radius: 10px;
@@ -278,9 +278,9 @@ header{
     }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 730px) {
     .container_item{
-        font-size: 18px;
+        font-size: 22px;
     }
     .main_container{
         justify-items: center;
@@ -288,6 +288,11 @@ header{
     }
 }
 
+@media (max-width: 620px) {
+    .container_item{
+        font-size: 18px;
+    }
+}
 
 @media (max-width: 480px) {
     .container_item{
@@ -365,7 +370,13 @@ header{
         border-radius: 7px;
         padding: 0;
     }
-    .main_container{
-        margin: 36px;
+}
+
+@media (max-width: 220px) {
+    .container_item{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        font-size: 8px;
+        border-radius: 7px;
     }
 }
