@@ -12,8 +12,25 @@ main{
     width: auto;
     height: auto;
 }
+p{
+    font-size: 48px;
+}
 
-
+select, input{
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #2c2b2b;
+    outline: none !important;
+    width: 500px;
+    height: 44px;
+    color: #cccccc;
+    font-size: 24px;
+    font-family: Tahoma, fantasy;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 .authreg-container{
     display: grid;
@@ -24,24 +41,13 @@ main{
     border-radius: 10px;
 }
 
-select, input{
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    background: #404041;
-    outline: none;
-    width: 400px;
-    height: 44px;
-    color: #cccccc;
-    font-size: 24px;
-    font-family: Tahoma, fantasy;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 @media (max-width: 1200px) {
+    p{
+        font-size: 52px;
+    }
     select, input{
-
+        font-size: 36px;
+        width: 700px;
     }
 }
 
@@ -56,4 +62,8 @@ input[type="submit"]{
     font-size: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
+}
+.auth-btn{
+    color: cornflowerblue;
+    text-decoration: grey;
 }
