@@ -13,10 +13,10 @@ main{
     height: auto;
 }
 p{
-    font-size: 48px;
+    font-size: 56px;
 }
 
-select, input{
+select, input, button{
     border: none;
     border-bottom: 1px solid #cccccc;
     border-radius: 3px;
@@ -36,6 +36,7 @@ select, input{
     display: grid;
     justify-items: center;
     background-color: #2c2b2b;
+    width: auto;
     color: white;
     font-size: 34px;
     border-radius: 10px;
@@ -45,13 +46,56 @@ select, input{
     p{
         font-size: 52px;
     }
-    select, input{
+    select, input, button{
         font-size: 36px;
-        width: 700px;
+        height: 58px;
+        width: 450px;
     }
 }
 
-input[type="submit"]{
+@media (max-width: 800px) {
+    p{
+        font-size: 46px;
+    }
+    select, input, button{
+        height: 68px;
+    }
+}
+
+@media (max-width: 600px) {
+    p{
+        font-size: 44px;
+    }
+    select, input, button{
+        font-size: 32px;
+        height: 78px;
+        width: 380px;
+    }
+}
+@media (max-width: 440px) {
+    p{
+        font-size: 40px;
+    }
+    select, input, button{
+        font-size: 28px;
+        height: 78px;
+        width: 280px;
+    }
+}
+@media (max-width: 350px) {
+    p{
+        font-size: 36px;
+    }
+    select, input, button{
+        font-size: 20px;
+        height: 78px;
+        width: 200px;
+    }
+}
+
+
+
+button[type="submit"]{
     background-color: white;
     color: #404041;
 }

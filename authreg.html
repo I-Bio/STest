@@ -2,22 +2,23 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0">
     <link href="authreg.css" rel="stylesheet">
     <title>Title</title>
 </head>
 <body>
     <main>
-        <div class="authreg-container">
+        <form method="post" class="authreg-container">
             <p>Регистрация</p>
             <input type="text" id="name" placeholder="Имя">
-            <input type="text" id="surname" placeholder="Фамилия">
+            <input type="text" id="surname" placeholder="Фамилияв">
             <input type="email" id="email" placeholder="Почта">
             <select id="group" placeholder="Группа"></select>
             <input type="password" id="fpassword" placeholder="Введите пароль">
             <input type="password" id="rpassword" placeholder="Повторите пароль">
-            <input type="submit" id="registr" value="Зарегистрироваться">
+            <button type="submit" id="registr">Зарегистрироваться</button>
             <div class="auth-field"><a class="auth-btn" href="#">Login</a></div>
-        </div>
+        </form>
     </main>
 </body>
 </html>
