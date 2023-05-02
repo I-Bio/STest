@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    width: auto;
+    height: auto;
+}
+
+
+
+.authreg-container{
+    display: grid;
+    justify-items: center;
+    background-color: #2c2b2b;
+    color: white;
+    font-size: 34px;
+    border-radius: 10px;
+}
+
+select, input{
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #404041;
+    outline: none;
+    width: 400px;
+    height: 44px;
+    color: #cccccc;
+    font-size: 24px;
+    font-family: Tahoma, fantasy;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media (max-width: 1200px) {
+    select, input{
+
+    }
+}
+
+input[type="submit"]{
+    background-color: white;
+    color: #404041;
+}
+
+.auth-field{
+    justify-self: right;
+    align-self: center;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
