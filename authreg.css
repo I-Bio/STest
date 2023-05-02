@@ -1,17 +1,14 @@
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #111111;
     margin: 0;
-    width: 100vw;
-    height: 100vh;
 }
 
 main{
-    margin-top: 12vh;
-    width: auto;
-    height: auto;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 p{
     font-size: 56px;
@@ -38,10 +35,10 @@ select, input, button{
     justify-items: center;
     background-color: #2c2b2b;
     width: auto;
+    height: auto;
     color: white;
     font-size: 34px;
     border-radius: 10px;
-    margin-bottom: 50px;
 }
 
 @media (max-width: 1200px) {
@@ -50,7 +47,6 @@ select, input, button{
     }
     select, input, button{
         font-size: 36px;
-        height: 58px;
         width: 450px;
     }
 }
@@ -58,9 +54,6 @@ select, input, button{
 @media (max-width: 800px) {
     p{
         font-size: 46px;
-    }
-    select, input, button{
-        height: 68px;
     }
 }
 
@@ -70,7 +63,6 @@ select, input, button{
     }
     select, input, button{
         font-size: 32px;
-        height: 78px;
         width: 380px;
     }
 }
@@ -80,7 +72,6 @@ select, input, button{
     }
     select, input, button{
         font-size: 28px;
-        height: 78px;
         width: 280px;
     }
 }
@@ -90,7 +81,6 @@ select, input, button{
     }
     select, input, button{
         font-size: 20px;
-        height: 78px;
         width: 200px;
     }
 }
