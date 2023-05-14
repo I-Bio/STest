@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0">
     <title>Test</title>
     <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -18,14 +19,14 @@
                     <use xlink:href="bootstrap-icons.svg#grid"></use>
                 </svg>
             </div>
-            <div class="hamburger-menu">
-                <input class="mn_tgl" id="menu__toggle" type="checkbox" />
-                <label class="menu__btn" for="menu__toggle">
-                    <span></span>
-                </label>
+        </div>
+        <div class="hamburger-menu">
+            <input class="mn_tgl" id="menu__toggle" type="checkbox" onclick="MainPaddingFromBurger()"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
 
             <ul class="menu__box">
-                <li class="Zaglyshka"></li>
                 <li><a class="menu__item" href="#">
                     <svg class="bi me-2" width="16" height="16" fill="#ffffff">
                         <use xlink:href="bootstrap-icons.svg#grid"></use>
@@ -43,11 +44,70 @@
                         <use xlink:href="bootstrap-icons.svg#grid"></use>
                     </svg>Распределить студентов</a></li>
             </ul>
-            </div>
         </div>
     </header>
-    <main>
+    <main class="main-locator">
         <div class="main_container">
+            <div class="container_item">
+                <div class="test-name mrgB-10 mrgT10 pdn-10">Имя теста</div>
+                <div class="group-name mrgB-10 pdn-10">Группа: FGH12</div>
+                <div class="date-close mrgB-10 pdn-10">12:12:2222</div>
+                <div class="test-closed mrgB-10 pdn-10">Тест закрыт</div>
+                <div class="quest-type mrgB-10 pdn-10">Тип: задача</div>
+                <div class="count-complete mrgB-10 pdn-10">Выполнили 2/12</div>
+                <div class="btn-distribute mrgB-10 pdn-10">Распределить<a class="distribute-a" href="#"></a> </div>
+                <div class="add-day mrgB-10 pdn-10">Добавить День</div>
+            </div>
+            <div class="container_item">
+                <div class="test-name mrgB-10 mrgT10 pdn-10">Имя теста</div>
+                <div class="group-name mrgB-10 pdn-10">Группа: FGH12</div>
+                <div class="date-close mrgB-10 pdn-10">12:12:2222</div>
+                <div class="test-closed mrgB-10 pdn-10">Тест закрыт</div>
+                <div class="quest-type mrgB-10 pdn-10">Тип: задача</div>
+                <div class="count-complete mrgB-10 pdn-10">Выполнили 2/12</div>
+                <div class="btn-distribute mrgB-10 pdn-10">Распределить<a class="distribute-a" href="#"></a> </div>
+                <div class="add-day mrgB-10 pdn-10">Добавить День</div>
+            </div>
+            <div class="container_item">
+                <div class="test-name mrgB-10 mrgT10 pdn-10">Имя теста</div>
+                <div class="group-name mrgB-10 pdn-10">Группа: FGH12</div>
+                <div class="date-close mrgB-10 pdn-10">12:12:2222</div>
+                <div class="test-closed mrgB-10 pdn-10">Тест закрыт</div>
+                <div class="quest-type mrgB-10 pdn-10">Тип: задача</div>
+                <div class="count-complete mrgB-10 pdn-10">Выполнили 2/12</div>
+                <div class="btn-distribute mrgB-10 pdn-10">Распределить<a class="distribute-a" href="#"></a> </div>
+                <div class="add-day mrgB-10 pdn-10">Добавить День</div>
+            </div>
+            <div class="container_item">
+                <div class="test-name mrgB-10 mrgT10 pdn-10">Имя теста</div>
+                <div class="group-name mrgB-10 pdn-10">Группа: FGH12</div>
+                <div class="date-close mrgB-10 pdn-10">12:12:2222</div>
+                <div class="test-closed mrgB-10 pdn-10">Тест закрыт</div>
+                <div class="quest-type mrgB-10 pdn-10">Тип: задача</div>
+                <div class="count-complete mrgB-10 pdn-10">Выполнили 2/12</div>
+                <div class="btn-distribute mrgB-10 pdn-10">Распределить<a class="distribute-a" href="#"></a> </div>
+                <div class="add-day mrgB-10 pdn-10">Добавить День</div>
+            </div>
+            <div class="container_item">
+                <div class="test-name mrgB-10 mrgT10 pdn-10">Имя теста</div>
+                <div class="group-name mrgB-10 pdn-10">Группа: FGH12</div>
+                <div class="date-close mrgB-10 pdn-10">12:12:2222</div>
+                <div class="test-closed mrgB-10 pdn-10">Тест закрыт</div>
+                <div class="quest-type mrgB-10 pdn-10">Тип: задача</div>
+                <div class="count-complete mrgB-10 pdn-10">Выполнили 2/12</div>
+                <div class="btn-distribute mrgB-10 pdn-10">Распределить<a class="distribute-a" href="#"></a> </div>
+                <div class="add-day mrgB-10 pdn-10">Добавить День</div>
+            </div>
+            <div class="container_item">
+                <div class="test-name mrgB-10 mrgT10 pdn-10">Имя теста</div>
+                <div class="group-name mrgB-10 pdn-10">Группа: FGH12</div>
+                <div class="date-close mrgB-10 pdn-10">12:12:2222</div>
+                <div class="test-closed mrgB-10 pdn-10">Тест закрыт</div>
+                <div class="quest-type mrgB-10 pdn-10">Тип: задача</div>
+                <div class="count-complete mrgB-10 pdn-10">Выполнили 2/12</div>
+                <div class="btn-distribute mrgB-10 pdn-10">Распределить<a class="distribute-a" href="#"></a> </div>
+                <div class="add-day mrgB-10 pdn-10">Добавить День</div>
+            </div>
             <div class="container_item">
                 <div class="test-name mrgB-10 mrgT10 pdn-10">Имя теста</div>
                 <div class="group-name mrgB-10 pdn-10">Группа: FGH12</div>

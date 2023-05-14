@@ -9,16 +9,46 @@
 <body>
     <main>
         <form method="post" class="authreg-container">
-            <p>Регистрация</p>
-            <input type="text" id="name" placeholder="Имя">
-            <input type="text" id="surname" placeholder="Фамилия">
-            <input type="email" id="email" placeholder="Почта">
-            <select id="group"></select>
-            <input type="password" id="fpassword" placeholder="Введите пароль">
-            <input type="password" id="rpassword" placeholder="Повторите пароль">
-            <button type="submit" id="registr">Зарегистрироваться</button>
-            <div class="auth-field"><a class="auth-btn" href="#">Авторизация</a></div>
+            <h1>Регистрация</h1>
+            <ul class="list-prefs">
+                <li class="input-container">
+                    <input type="text" id="first_name" name="first_name" placeholder="Имя"
+                           onkeyup="ValidateName(); FormChecker()">
+                    <p></p>
+                </li>
+                <li class="input-container">
+                    <input type="text" id="last_name" name="last_name" placeholder="Фамилия"
+                           onkeyup="ValidateName(); FormChecker()">
+                    <p></p>
+                </li>
+                <li class="input-container">
+                    <input type="email" id="email" name="email" placeholder="Почта"
+                           onkeyup="FormChecker(); ValidateEmail()">
+                    <p></p>
+                </li>
+                <li class="input-container">
+                    <select id="group" name="group" onchange="FormChecker()"></select>
+                    <p></p>
+                </li>
+                <li class="input-container">
+                    <input type="password" id="password" name="password" placeholder="Введите пароль"
+                           onkeyup="ValidatePass(); FormChecker()">
+                    <p></p>
+                </li>
+                <li class="input-container">
+                    <input type="password" id="lpassword" name="lpassword" placeholder="Повторите пароль"
+                           onkeyup="ValidatePass(); FormChecker()">
+                    <p></p>
+                </li>
+                <li class="input-container">
+                    <button type="submit" id="registr" name="registr">Зарегистрироваться</button>
+                    <p></p>
+                </li>
+
+                <li class="auth-field"><a class="auth-btn" href="#">Авторизация</a></li>
+            </ul>
         </form>
     </main>
+    <script src="registration.js"></script>
 </body>
 </html>

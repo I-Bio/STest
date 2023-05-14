@@ -1,17 +1,32 @@
 body{
+    height: 100vh;
     background-color: #111111;
     margin: 0;
 }
 
 main{
+    height: 100%;
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+h1{
+    font-size: 42px;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 p{
-    font-size: 56px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Gabriola sans-serif;
+    color: rgba(253, 63, 48, 0.71);
+    margin: 0;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    text-align: right;
 }
 
 select, input, button{
@@ -21,17 +36,24 @@ select, input, button{
     background: #2c2b2b;
     outline: none !important;
     width: 500px;
-    height: 44px;
     color: #cccccc;
-    font-size: 24px;
+    font-size: 20px;
     font-family: Tahoma, fantasy;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
+.list-prefs{
+    list-style: none;
+    padding: 0 0;
+    margin: 0 0;
+}
+
 .authreg-container{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     justify-items: center;
     background-color: #2c2b2b;
     width: auto;
@@ -39,53 +61,9 @@ select, input, button{
     color: white;
     font-size: 34px;
     border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
-
-@media (max-width: 1200px) {
-    p{
-        font-size: 52px;
-    }
-    select, input, button{
-        font-size: 36px;
-        width: 450px;
-    }
-}
-
-@media (max-width: 800px) {
-    p{
-        font-size: 46px;
-    }
-}
-
-@media (max-width: 600px) {
-    p{
-        font-size: 44px;
-    }
-    select, input, button{
-        font-size: 32px;
-        width: 380px;
-    }
-}
-@media (max-width: 440px) {
-    p{
-        font-size: 40px;
-    }
-    select, input, button{
-        font-size: 28px;
-        width: 280px;
-    }
-}
-@media (max-width: 350px) {
-    p{
-        font-size: 36px;
-    }
-    select, input, button{
-        font-size: 20px;
-        width: 200px;
-    }
-}
-
-
 
 button[type="submit"]{
     background-color: white;
@@ -93,13 +71,91 @@ button[type="submit"]{
 }
 
 .auth-field{
-    justify-self: right;
-    align-self: center;
-    font-size: 20px;
+    text-align: right;
+    font-size: 22px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
+
 .auth-btn{
     color: cornflowerblue;
     text-decoration: grey;
+}
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10004;";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10006;";
+}
+
+@media (max-width: 1200px) {
+    h1{
+        font-size: 40px;
+    }
+    select, input, button{
+        width: 450px;
+    }
+    .auth-field {
+        font-size: 20px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    h1{
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1{
+        font-size: 36px;
+    }
+    select, input, button{
+        width: 380px;
+    }
+}
+@media (max-width: 440px) {
+    h1{
+        font-size: 34px;
+    }
+    select, input, button{
+        font-size: 18px;
+        width: 280px;
+    }
+    .auth-field{
+        font-size: 18px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+}
+@media (max-width: 350px) {
+    h1{
+        font-size: 32px;
+    }
+    select, input, button{
+        font-size: 14px;
+        width: 200px;
+    }
+    .auth-field, p{
+        font-size: 14px;
+    }
 }
