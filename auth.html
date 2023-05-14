@@ -9,12 +9,29 @@
 <body>
     <main>
         <form method="post" class="authreg-container">
-            <p>Авторизация</p>
-            <input type="email" id="email" placeholder="Почта">
-            <input type="password" id="fpassword" placeholder="Введите пароль">
-            <button type="submit" id="registr">Войти</button>
-            <div class="auth-field"><a class="auth-btn" href="#">Регистрация</a></div>
+            <h1>Авторизация</h1>
+            <ul class="list-prefs">
+                <li class="input-container">
+                    <input type="email" id="email" name="email" placeholder="Почта"
+                    onkeyup="FormValidator()">
+                    <p></p>
+                </li>
+                <li class="input-container">
+                    <input type="password" id="password" name="password" placeholder="Введите пароль"
+                    onkeyup="FormValidator()">
+                    <p></p>
+                </li>
+                <li class="input-container">
+                    <button type="submit" id="registr" name="registr">Войти</button>
+                    <p></p>
+                </li>
+                <li class="input-container">
+                    <div class="auth-field"><a class="auth-btn" href="#">Регистрация</a></div>
+                    <p></p>
+                </li>
+            </ul>
         </form>
     </main>
+    <script src="login.js"></script>
 </body>
 </html>

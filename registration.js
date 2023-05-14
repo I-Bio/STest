@@ -12,7 +12,13 @@ let groupMessage = group.parentNode.querySelector("p");
 let fpassMessage = fpassword.parentNode.querySelector("p");
 let lpassMessage = lpassword.parentNode.querySelector("p");
 
+let isValidEmail = false;
+let isValidFirstName = false;
+let isValidLastName = false;
+let isValidPassword = false;
+
 submitButton.setAttribute("disabled", "");
+submitButton.style.backgroundColor = "#868686";
 
 function FormChecker() {
     console.log("отработал");
@@ -20,10 +26,15 @@ function FormChecker() {
         lpassword.value != "" &&
         firstName.value != "" &&
         lastName.value != "" &&
-        email.value != "")
+        email.value != "" &&
+        isValidEmail &&
+        isValidLastName &&
+        isValidFirstName &&
+        isValidPassword)
         //group.value != "")
     {
         submitButton.removeAttribute("disabled");
+        submitButton.style.backgroundColor = "#ffffff";
     } else {
         console.log(fNameMessage);
         if (firstName.value == "") fNameMessage.textContent = "Нужно ввести имя";
@@ -39,6 +50,7 @@ function FormChecker() {
         if (lpassword.value == "") lpassMessage.textContent = "Нужно повторить пароль";
             else if(lpassMessage.textContent == "Нужно повторить пароль") lpassMessage.textContent = "";
         submitButton.setAttribute("disabled", "");
+        submitButton.style.backgroundColor = "#868686";
     }
 }
 
@@ -47,8 +59,10 @@ function ValidateEmail(){
 
     if (regexMail.test(email.value)){
         emailMessage.textContent = "";
+        isValidEmail = true;
     } else {
         emailMessage.textContent = "Неправильная почта";
+        isValidEmail = false;
     }
 }
 
@@ -57,14 +71,18 @@ function ValidateName(){
 
     if (regexName.test(firstName.value)){
         fNameMessage.textContent = "";
+        isValidFirstName = true;
     } else {
         fNameMessage.textContent = "Используйте кириллицу"
+        isValidFirstName = false;
     }
 
     if (regexName.test(lastName.value)){
         lNameMessage.textContent = "";
+        isValidLastName = true;
     } else {
         lNameMessage.textContent = "Используйте кириллицу"
+        isValidLastName = false;
     }
 }
 
@@ -77,11 +95,13 @@ function ValidatePass(){
         lpassword.classList.remove("valid");
         lpassword.classList.add("invalid");
 
+        isValidPassword = false;
         lpassMessage.textContent = "Пароль не совпадает";
     }else {
         lpassword.classList.remove("invalid");
         lpassword.classList.add("valid");
 
+        isValidPassword = true;
         lpassMessage.textContent = "";
     }
 }
