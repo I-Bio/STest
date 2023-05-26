@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed bg-dark">
     <div class="wrapper">
 
         <nav class="main-header navbar navbar-expand navbar-dark">
@@ -121,83 +121,119 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Dashboard</h1>
+                            <h1 class="m-0 text-light">Курс</h1>
                         </div>
                     </div>
                 </div>
             </div>
 
             <section class="content">
-                <div class="container-fluid">
 
-                    <div class="row">
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-black">
-                                <div class="inner">
-                                    <h3>Информатика</h3>
-                                    <p>Курс</p>
-                                </div>
-                                <a href="#" class="small-box-footer">Перейти<i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
+                <div class="container-fluid">
+                    <div class="card bg-gradient-dark">
+                        <div class="info-box bg-gradient-success text-md-center inner flex-column">
+                            <h3>Информатика</h3>
                         </div>
-                        <div class="col-lg-3 col-6">
+                        <div class="col-12">
                             <div class="small-box bg-gradient-dark">
                                 <div class="inner">
-                                    <h3>Ещё предмет</h3>
-                                    <p>Курс</p>
+                                    <h3 class="h3">Тема 1</h3>
+                                    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#modal-secondary">
+                                            Launch Default Modal
+                                    </button>
                                 </div>
-                                <a href="#" class="small-box-footer">Перейти<i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-gradient-dark">
-                                <div class="inner">
-                                    <h3>Ещё предмет</h3>
-                                    <p>Курс</p>
-                                </div>
-                                <a href="#" class="small-box-footer">Перейти<i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-gradient-dark">
-                                <div class="inner">
-                                    <h3>Ещё предмет</h3>
-                                    <p>Курс</p>
-                                </div>
-                                <a href="#" class="small-box-footer">Перейти<i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-gradient-dark">
-                                <div class="inner">
-                                    <h3>Ещё предмет</h3>
-                                    <p>Курс</p>
-                                </div>
-                                <a href="#" class="small-box-footer">Перейти<i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="card card-primary">
-                                <div class="card-header">
-                                    <h3 class="card-title">Expandable</h3>
-                                    <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                                        </button>
+                                <div class="small col-lg-12">
+                                    <div class="small-box col-12">
+                                        <div class="row ml-2 align-items-center">
+                                            <div class="fas fa-file-download fa-2x align-items-center">
+                                                <a href="#PathToFile" download="#FileName" class="text-success">
+                                                    <span style="font-size: 18px">Имя</span>
+                                                </a>
+                                            </div>
+                                            <div class="ml-3">
+                                                <i class="fas fa-wrench"></i>
+                                                <button class="btn btn-outline-light">Редактировать</button>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-2 align-items-center">
+                                            <div class="align-items-center">
+                                                <span class="text-light" style="font-size: 18px">Имя</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="card-body" style="display: block;">
-                                The body of the card
-                                </div>
+                                <a href="#" class="small-box-footer">Перейти<i
+                                        class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="modal fade" id="modal-secondary">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Выбор элемента для создания</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="nav nav-pills row">
+                                    <li class="col-lg-4 col-4">
+                                        <a href="#">
+                                            <div class="small-box bg-cyan">
+                                                <div class="inner">
+                                                    <div class="text-light">Лекция</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="col-lg-4 col-4">
+                                        <a href="#">
+                                            <div class="small-box bg-cyan">
+                                                <div class="inner">
+                                                    <div class="text-light">Файл</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="col-lg-4 col-4">
+                                        <a href="#">
+                                            <div class="small-box bg-cyan">
+                                                <div class="inner">
+                                                    <div class="text-light">Тест</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="col-lg-4 col-4">
+                                        <a href="#">
+                                            <div class="small-box bg-cyan">
+                                                <div class="inner">
+                                                    <div class="text-light">Задание</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="col-lg-4 col-4">
+                                        <a href="#">
+                                            <div class="small-box bg-cyan">
+                                                <div class="inner">
+                                                    <div class="text-light">Ссылка</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                <button type="button" class="btn btn-primary">Создать</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </div>
