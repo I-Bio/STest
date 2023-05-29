@@ -415,6 +415,26 @@
                         </div>
                     </form>
                     <script defer src="testForm.js"></script>
+                    <template id="RemoveFromQuest">
+                        <li class="splide__slide">
+                            <div class="input-group">
+                                <p class="form-control bg-dark"></p>
+                                <div class="input-group-prepend">
+                                    <button name="removeButton" type="button" class="btn bg-danger">Убрать</button>
+                                </div>
+                            </div>
+                        </li>
+                    </template>
+                    <template id="AddQuestToTest">
+                        <li class="splide__slide">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button name="removeButton" type="button" class="btn bg-cyan">Добавить</button>
+                                </div>
+                                <p class="form-control bg-dark"></p>
+                            </div>
+                        </li>
+                    </template>
                 </div>
             </section>
 
@@ -448,24 +468,4 @@
     <!-- AdminLTE App -->
     <script src="static/dist/js/adminlte.js"></script>
 </body>
-<template id="RemoveFromQuest">
-    <li class="splide__slide">
-        <div class="input-group">
-            <p class="form-control bg-dark"></p>
-            <div class="input-group-prepend">
-                <button name="removeButton" type="button" class="btn bg-danger">Убрать</button>
-            </div>
-        </div>
-    </li>
-</template>
-<template id="AddQuestToTest">
-    <li class="splide__slide">
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <button name="removeButton" type="button" class="btn bg-cyan">Добавить</button>
-            </div>
-            <p class="form-control bg-dark"></p>
-        </div>
-    </li>
-</template>
 </html>
