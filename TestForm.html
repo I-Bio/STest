@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="static/plugins/daterangepicker/daterangepicker.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- Splide -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -67,7 +69,7 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar nav-flat nav-compact nav-legacy flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                        <li class="nav-item has-treeview menu-open">
+                        <li class="nav-item has-treeview">
                             <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
@@ -76,11 +78,110 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link active">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Какая-то дисциплина</p>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-circle"></i>
+                                        <p>
+                                            Какая-то дисциплина
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
                                     </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 3</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 4</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-circle"></i>
+                                        <p>
+                                            Какая-то дисциплина
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 3</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 4</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-circle"></i>
+                                        <p>
+                                            Какая-то дисциплина
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 3</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 4</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
@@ -157,56 +258,112 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card card-default bg-gradient-dark">
-                                    <div class="card-header bg-success">
-                                        <h3 class="card-title">Задания</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="col-12">
-                                            <div class="small-box">
-                                                <div class="custom-control custom-checkbox pl-0">
-                                                    <input class="custom-control-input" type="checkbox" id="allCheckBox">
-                                                    <label for="allCheckBox" class="custom-control-label">Выбрать всё</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 cont-quest">
-                                            <div class="form-group small-box">
-                                                <div class="custom-control custom-checkbox pl-0">
-                                                    <input class="custom-control-input" name="delCheckBox" type="checkbox" id="customCheckbox0">
-                                                    <label for="customCheckbox0" class="custom-control-label"></label>
-                                                    <select class="custom-select bg-dark col-lg-5 col-sm-8 col-8" id="firstSel">
-                                                        <option>Выбрать задачу</option>
-                                                        <option>None2</option>
-                                                        <option>None3</option>
-                                                    </select>
-                                                    <button type="button" class="btn btn-danger float-right" name="delThisFieldButton">Удалить</button>
-                                                </div>
-                                            </div>
-                                            <div class="form-group small-box">
-                                                <div class="custom-control custom-checkbox pl-0">
-                                                    <input class="custom-control-input" name="delCheckBox" type="checkbox" id="customCheckbox1">
-                                                    <label for="customCheckbox1" class="custom-control-label"></label>
-                                                    <select class="custom-select bg-dark col-lg-5 col-sm-8 col-8">
-                                                        <option>Выбрать задачу</option>
-                                                        <option>None2</option>
-                                                        <option>None3</option>
-                                                    </select>
-                                                    <button type="button" class="btn btn-danger float-right" name="delThisFieldButton">Удалить</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row small-box">
-                                            <div class="text-red" id="warning">
+                        <div class="card">
+                            <div class="card-header bg-success">
+                                <h3 class="card-title">Основное</h3>
+                            </div>
 
+                            <div class="card-body bg-gradient-dark">
+                                <div class="row">
+                                    <div class="col-lg-6 splide" id="inTest">
+                                        <div class="form-group">
+                                            <p class="card-header bg-success">Задачи в тесте</p>
+                                        </div>
+                                        <div class="splide__track small-box bg-dark">
+                                            <ul class="splide__list" id="TestList" role="group">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 splide" id="inBank">
+                                        <div class="card-header bg-success row m-0 mb-2">
+                                                <p class="col-4 m-0 p-0">Задачи из банка</p>
+                                                <div class="col-8 flex-row float-right">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text bg-dark">
+                                                                <i class="fas fa-search"></i>
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" id="searchField" class="form-control p-0 h-auto bg-dark">
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row small-box">
-                                            <button type="button" class="btn bg-cyan float-left" id="addQuestButton">Добавить</button>
-                                            <button type="button" class="btn bg-cyan float-right" id="delQuestButton">Удалить выбранное</button>
-                                        </div>
+                                        <div class="splide__track small-box bg-dark">
+                                                <ul class="splide__list" id="BankList" role="group">
+                                                    <li class="splide__slide">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
+                                                            </div>
+                                                            <p class="form-control bg-dark">РТС12</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
+                                                            </div>
+                                                            <p class="form-control bg-dark">РТС12</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
+                                                            </div>
+                                                            <p class="form-control bg-dark">РТС12</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
+                                                            </div>
+                                                            <p class="form-control bg-dark">ЛМ</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
+                                                            </div>
+                                                            <p class="form-control bg-dark">РТС12</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
+                                                            </div>
+                                                            <p class="form-control bg-dark">РТС12</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
+                                                            </div>
+                                                            <p class="form-control bg-dark">РТС12</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
+                                                            </div>
+                                                            <p class="form-control bg-dark">РТС77</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="splide__slide">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
+                                                            </div>
+                                                            <p class="form-control bg-dark">РТС12</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -257,7 +414,7 @@
                             </div>
                         </div>
                     </form>
-                    <script src="testCreation.js"></script>
+                    <script defer src="testForm.js"></script>
                 </div>
             </section>
 
@@ -279,6 +436,8 @@
         $.widget.bridge('uibutton', $.ui.button)
     </script>
 
+    <!-- Splide -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- daterangepicker -->
@@ -289,5 +448,24 @@
     <!-- AdminLTE App -->
     <script src="static/dist/js/adminlte.js"></script>
 </body>
-
+<template id="RemoveFromQuest">
+    <li class="splide__slide">
+        <div class="input-group">
+            <p class="form-control bg-dark"></p>
+            <div class="input-group-prepend">
+                <button name="removeButton" type="button" class="btn bg-danger">Убрать</button>
+            </div>
+        </div>
+    </li>
+</template>
+<template id="AddQuestToTest">
+    <li class="splide__slide">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <button name="removeButton" type="button" class="btn bg-cyan">Добавить</button>
+            </div>
+            <p class="form-control bg-dark"></p>
+        </div>
+    </li>
+</template>
 </html>
