@@ -1,3 +1,5 @@
+// var csrf = $("input[name=csrfmiddlewaretoken]").val();
+
 let RemoveButton = document.getElementById("RemoveButton");
 
 $('button[name="delButton"]').click(
