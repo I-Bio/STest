@@ -6,6 +6,12 @@ $('button[name="delButton"]').click(
 	}
 )
 
+$('button[name="editButton"]').click(
+	function (){
+		EditQuestion(this);
+	}
+)
+
 $("#searchField").keyup(
 	function (){
 		SearchQuest();
@@ -20,25 +26,39 @@ function TranslateDataToModal(button){
 
 
 	RemoveButton.addEventListener('click',function (){
-		DeleteQuestion(button.parentNode.parentNode.parentNode);
+		DeleteQuestion(button.parentNode.parentNode.parentNode, button.id);
 	});
 }
 
-function DeleteQuestion(node){
+function DeleteQuestion(node, id){
 
 	$.ajax({
 		url: '',
 		type: "post",
 		data: {
-			'key': node.querySelector("p").textContent,
+			'toDelete': id,
 			//csrfmiddlewaretoken: csrf,
 		},
 		success: function (response){
-			//$(".alert-text").text(response.seconds);
-			console.log("Success");
-			console.log();
-
 			node.remove();
+
+			console.log("Удаление завершено");
+		}
+	});
+}
+
+function EditQuestion(editButton){
+	let buttonId = editButton.parentNode.parentNode.querySelector(".bg-danger").id;
+
+	$.ajax({
+		url: '',
+		type: "post",
+		data: {
+			'toEdit': buttonId,
+			//csrfmiddlewaretoken: csrf,
+		},
+		success: function (response){
+			console.log("Редактируем");
 		}
 	});
 }
