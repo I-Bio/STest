@@ -2,37 +2,28 @@
 
 let RemoveButton = document.getElementById("RemoveButton");
 
-$('button[name="delButton"]').click(
-	function (){
-		TranslateDataToModal(this);
-	}
-)
+$('button[name="delButton"]').click(TranslateDataToModal);
 
-$('button[name="editButton"]').click(
-	function (){
-		EditQuestion(this);
-	}
-)
+$('button[name="editButton"]').click(EditQuestion);
 
-$("#searchField").keyup(
-	function (){
-		SearchQuest();
-	}
-)
+$("#searchField").keyup(SearchQuest);
 
-function TranslateDataToModal(button){
+function TranslateDataToModal(event){
+	let button = event.target;
 	let text = button.parentNode.parentNode.querySelector("p").textContent;
 	let modalText = document.getElementById("modalText");
 
 	modalText.textContent = `Вы точно хотите удалить вопрос ${text}?`
 
-
-	RemoveButton.addEventListener('click',function (){
-		DeleteQuestion(button.parentNode.parentNode.parentNode, button.id);
-	});
+	RemoveButton.removeEventListener('click', DeleteQuestion);
+	RemoveButton.setAttribute("data-name", button.id);
+	RemoveButton.addEventListener('click', DeleteQuestion);
 }
 
-function DeleteQuestion(node, id){
+function DeleteQuestion(event){
+	let removeButton = event.target;
+	let id = removeButton.getAttribute("data-name");
+	let node = document.getElementById(id).parentNode.parentNode.parentNode;
 
 	$.ajax({
 		url: '',
@@ -49,8 +40,8 @@ function DeleteQuestion(node, id){
 	});
 }
 
-function EditQuestion(editButton){
-	let buttonId = editButton.parentNode.parentNode.querySelector(".bg-danger").id;
+function EditQuestion(event){
+	let buttonId = event.target.parentNode.parentNode.querySelector(".bg-danger").id;
 
 	$.ajax({
 		url: '',
