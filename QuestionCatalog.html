@@ -259,7 +259,7 @@
                                                         </div>
                                                         <p class="form-control bg-dark">РТС12</p>
                                                         <div class="input-group-append">
-                                                            <button type="button" name="delButton" id="" class="btn bg-danger" data-toggle="modal" data-target="#modal">Удалить</button>
+                                                            <button type="button" name="delButton" id="1" class="btn bg-danger" data-toggle="modal" data-target="#modal">Удалить</button>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -390,29 +390,30 @@
                                 </div>
                             </div>
                         </div>
-                </form>
-                </div>
-                <div class="modal fade" id="modal">
-                    <div class="modal-dialog">
-                        <div class="modal-content bg-dark">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Подтверждение</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p id="modalText"></p>
-                            </div>
-                            <div class="modal-footer justify-content-between">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                                <button type="button" id="RemoveButton" data-dismiss="modal" class="btn btn-danger">Удалить</button>
+                    </form>
+                    <div class="modal fade" id="modal">
+                        <div class="modal-dialog">
+                            <div class="modal-content bg-dark">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Подтверждение</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="modalText"></p>
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                    <button type="button" id="RemoveButton" data-dismiss="modal" class="btn btn-danger">Удалить</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-
+                    <script defer src="questionCatalog.js"></script>
                 </div>
-                <script defer src="questionCatalog.js"></script>
+
+
             </section>
         </div>
         <footer class="main-footer bg-dark">
