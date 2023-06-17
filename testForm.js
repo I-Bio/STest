@@ -1,3 +1,5 @@
+// var csrf = $("input[name=csrfmiddlewaretoken]").val();
+
 var testQuest = new Splide( '#inTest', {
 	direction: 'ttb',
 	height   : '10rem',
@@ -16,6 +18,20 @@ var bankQuest = new Splide( '#inBank', {
 testQuest.mount();
 bankQuest.mount();
 
+$("#dateFrom").datetimepicker(
+	{
+		format: 'DD.MM.YYYY HH:mm',
+		inline: false,
+		locale: 'ru',
+	}
+);
+$("#dateTo").datetimepicker(
+	{
+		format: 'DD.MM.YYYY HH:mm',
+		inline: false,
+		locale: 'ru',
+	}
+);
 
 $('button[name="addButton"]').click(
 	function (){
@@ -23,14 +39,19 @@ $('button[name="addButton"]').click(
 	}
 );
 
-$("#searchField").keyup(
+$('button[name="removeButton"]').click(
 	function (){
-		Search();
+		ListContentUpdater(this, 1);
 	}
 );
 
+$("#searchField").keyup(SearchFunc);
+
+$("#submitButton").click(SubmitForm);
+
 function ListContentUpdater(myButton, type){
 	let newItemId, containerId;
+	let id = myButton.id;
 
 	if (type == 1){
 		newItemId = "AddQuestToTest";
@@ -44,6 +65,7 @@ function ListContentUpdater(myButton, type){
 	let newItem = document.getElementById(newItemId).content.cloneNode(true);
 	let inputGroup = myButton.parentNode.parentNode;
 
+	newItem.querySelector("button").id = id;
 	newItem.querySelector("p").textContent = inputGroup.querySelector("p").textContent;
 	inputGroup.parentNode.remove();
 
@@ -70,22 +92,31 @@ function UpdateContentInLists(){
 	bankQuest.mount();
 }
 
-function Search() {
-	let input, filter, li;
+function SubmitForm(){
+	let id = document.getElementsByName("name_id")[0].value;
+	let description = document.getElementsByName("condition")[0].value;
+	let dateFrom = document.getElementById("dateFrom").querySelector(".form-control").value;
+	let dateTo = document.getElementById("dateTo").querySelector(".form-control").value;
+	let questions = document.getElementsByName("removeButton");
+	let questionsId = [];
 
-	input = document.getElementById("searchField");
-	filter = input.value.toUpperCase();
-	li = document.getElementById("BankList").getElementsByTagName("li");
-
-	for (let i = 0; i < li.length; i++) {
-		let p = li[i].querySelector("p");
-		let text = p.textContent || p.innerText;
-
-		if (text.toUpperCase().indexOf(filter) > -1) {
-			li[i].style.display = "";
-		}
-		else {
-			li[i].style.display = "none";
-		}
+	for (let i = 0 ; i < questions.length; i++){
+		questionsId.push(questions[i].id);
 	}
+
+	$.ajax({
+		url: '',
+		type: "post",
+		data: {
+			name: id,
+			description : description,
+			questions : questionsId,
+			dateFrom : dateFrom,
+			dateTo : dateTo,
+			//csrfmiddlewaretoken: csrf,
+		},
+		success: function (response){
+			console.log("Удаление завершено");
+		}
+	});
 }

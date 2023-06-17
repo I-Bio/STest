@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="static/plugins/daterangepicker/daterangepicker.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- Splide -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -52,7 +54,7 @@
 
             <a href="index.html" class="brand-link navbar-success">
                 <img src="" alt="LOGO"
-                    class="brand-image elevation-3" style="opacity: .8">
+                     class="brand-image elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">ETS</span>
             </a>
 
@@ -67,7 +69,7 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar nav-flat nav-compact nav-legacy flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                        <li class="nav-item has-treeview menu-open">
+                        <li class="nav-item has-treeview">
                             <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
@@ -76,28 +78,119 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link active">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Какая-то дисциплина</p>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-circle"></i>
+                                        <p>
+                                            Какая-то дисциплина
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
                                     </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 3</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 4</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-circle"></i>
+                                        <p>
+                                            Какая-то дисциплина
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 3</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 4</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <i class="nav-icon fas fa-circle"></i>
+                                        <p>
+                                            Какая-то дисциплина
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 3</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Тема 4</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-header">Заголовок</li>
+                        <li class="nav-header">Меню преподавателя</li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon far"></i>
                                 <p>
-                                    Студенты
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far"></i>
-                                <p>
-                                    Оценки
+                                    Группы студентов
                                 </p>
                             </a>
                         </li>
@@ -106,6 +199,22 @@
                                 <i class="nav-icon far"></i>
                                 <p>
                                     Банк задач
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far"></i>
+                                <p>
+                                    Добавление дисциплины
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far"></i>
+                                <p>
+                                    Добавление тему
                                 </p>
                             </a>
                         </li>
@@ -121,7 +230,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Dashboard</h1>
+                            <h1 class="m-0 text-dark">Главная страница</h1>
                         </div>
                     </div>
                 </div>
@@ -129,78 +238,52 @@
 
             <section class="content">
                 <div class="container-fluid">
-
                     <div class="row">
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-black">
-                                <div class="inner">
-                                    <h3>Информатика</h3>
-                                    <p>Курс</p>
-                                </div>
-                                <a href="#" class="small-box-footer">Перейти<i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-gradient-dark">
+                        <div class="col-lg-4 col-sm-6 col-12">
+                            <div class="small-box bg-gradient-cyan">
                                 <div class="inner">
                                     <h3>Ещё предмет</h3>
                                     <p>Курс</p>
                                 </div>
-                                <a href="#" class="small-box-footer">Перейти<i
+                                <a href="#" class="small-box-footer bg-gradient-dark">Перейти <i
                                         class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-gradient-dark">
+                        <div class="col-lg-4 col-sm-6 col-12">
+                            <div class="small-box bg-gradient-cyan">
                                 <div class="inner">
                                     <h3>Ещё предмет</h3>
                                     <p>Курс</p>
                                 </div>
-                                <a href="#" class="small-box-footer">Перейти<i
+                                <a href="#" class="small-box-footer bg-gradient-dark">Перейти <i
                                         class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-gradient-dark">
+                        <div class="col-lg-4 col-sm-6 col-12">
+                            <div class="small-box bg-gradient-cyan">
                                 <div class="inner">
                                     <h3>Ещё предмет</h3>
                                     <p>Курс</p>
                                 </div>
-                                <a href="#" class="small-box-footer">Перейти<i
+                                <a href="#" class="small-box-footer bg-gradient-dark">Перейти <i
                                         class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-gradient-dark">
+                        <div class="col-lg-4 col-sm-6 col-12">
+                            <div class="small-box bg-gradient-cyan">
                                 <div class="inner">
                                     <h3>Ещё предмет</h3>
                                     <p>Курс</p>
                                 </div>
-                                <a href="#" class="small-box-footer">Перейти<i
+                                <a href="#" class="small-box-footer bg-gradient-dark">Перейти <i
                                         class="fas fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="card card-primary">
-                                <div class="card-header">
-                                    <h3 class="card-title">Expandable</h3>
-                                    <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-body" style="display: block;">
-                                The body of the card
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
+
         <footer class="main-footer bg-dark">
             <strong>Copyright &copy; 20**-20**</strong>
             All rights reserved.
@@ -217,6 +300,8 @@
         $.widget.bridge('uibutton', $.ui.button)
     </script>
 
+    <!-- Splide -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- daterangepicker -->

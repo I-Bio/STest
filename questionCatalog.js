@@ -6,8 +6,6 @@ $('button[name="delButton"]').click(TranslateDataToModal);
 
 $('button[name="editButton"]').click(EditQuestion);
 
-$("#searchField").keyup(SearchQuest);
-
 function TranslateDataToModal(event){
 	let button = event.target;
 	let text = button.parentNode.parentNode.querySelector("p").textContent;
@@ -54,24 +52,4 @@ function EditQuestion(event){
 			console.log("Редактируем");
 		}
 	});
-}
-
-function SearchQuest() {
-	let input, filter, li;
-
-	input = document.getElementById("searchField");
-	filter = input.value.toUpperCase();
-	li = document.getElementById("BankList").getElementsByTagName("li");
-
-	for (let i = 0; i < li.length; i++) {
-		let p = li[i].querySelector("p");
-		let text = p.textContent || p.innerText;
-
-		if (text.toUpperCase().indexOf(filter) > -1) {
-			li[i].style.display = "";
-		}
-		else {
-			li[i].style.display = "none";
-		}
-	}
 }
