@@ -22,15 +22,10 @@
     <link rel="stylesheet" href="static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <!-- Splide -->
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Moment -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="static/plugins/jquery-ui/jquery-ui.min.js"></script>
-
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed bg-dark">
@@ -231,7 +226,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-light">Создание теста</h1>
+                            <h1 class="m-0 text-light">Создание ссылки</h1>
                         </div>
                     </div>
                 </div>
@@ -249,7 +244,6 @@
                             <div class="card-body bg-gradient-dark">
                                 <div class="row">
                                     <div class="col-lg-6">
-
                                         <div class="form-group">
                                             <label>Название - ID</label>
                                             <input type="text" class="form-control bg-dark" name="name_id" placeholder="Ввод">
@@ -258,153 +252,10 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6">
-
                                         <div class="form-group">
-                                            <label>Описание</label>
-                                            <textarea class="form-control bg-dark" name="condition" rows="3" placeholder="Ввод" style="height: 250px;"></textarea>
+                                            <label>Ссылка</label>
+                                            <input type="text" class="form-control bg-dark" name="name_id" placeholder="Ввод">
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header bg-success">
-                                <h3 class="card-title">Основное</h3>
-                            </div>
-
-                            <div class="card-body bg-gradient-dark">
-                                <div class="row">
-                                    <div class="col-lg-6 splide" id="inTest">
-                                        <div class="form-group">
-                                            <p class="card-header bg-success">Задачи в тесте</p>
-                                        </div>
-                                        <div class="splide__track small-box bg-dark">
-                                            <ul class="splide__list" id="TestList" role="group">
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 splide" id="inBank">
-                                        <div class="card-header bg-success row m-0 mb-2">
-                                                <p class="col-4 m-0 p-0">Задачи из банка</p>
-                                                <div class="col-8 flex-row float-right">
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text bg-dark">
-                                                                <i class="fas fa-search"></i>
-                                                            </span>
-                                                        </div>
-                                                        <input type="text" id="searchField" class="form-control p-0 h-auto bg-dark">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <div class="splide__track small-box bg-dark">
-                                                <ul class="splide__list" id="BankList" role="group">
-                                                    <li class="splide__slide">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
-                                                            </div>
-                                                            <p class="form-control bg-dark">РТС12</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button name="addButton" type="button" id="" class="btn bg-cyan">Добавить</button>
-                                                            </div>
-                                                            <p class="form-control bg-dark">РТС12</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
-                                                            </div>
-                                                            <p class="form-control bg-dark">РТС12</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
-                                                            </div>
-                                                            <p class="form-control bg-dark">ЛМ</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
-                                                            </div>
-                                                            <p class="form-control bg-dark">РТС12</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
-                                                            </div>
-                                                            <p class="form-control bg-dark">РТС12</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
-                                                            </div>
-                                                            <p class="form-control bg-dark">РТС12</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
-                                                            </div>
-                                                            <p class="form-control bg-dark">РТС77</p>
-                                                        </div>
-                                                    </li>
-                                                    <li class="splide__slide">
-                                                        <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                                <button name="addButton" type="button" class="btn bg-cyan">Добавить</button>
-                                                            </div>
-                                                            <p class="form-control bg-dark">РТС12</p>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card card-primary bg-gradient-dark">
-                                    <div class="card-header bg-success">
-                                        <h3 class="card-title">Ограничение по времени</h3>
-                                    </div>
-                                    <div class="card-body">
-
-                                        <div class="form-group col-lg-6">
-                                            <label>Дата с:</label>
-                                            <div class="input-group date" id="dateFrom" data-target-input="nearest">
-                                                <input type="text" class="form-control datetimepicker-input bg-dark" data-target="#dateFrom">
-                                                <div class="input-group-append datepick" data-target="#dateFrom" data-toggle="datetimepicker">
-                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group col-lg-6">
-                                            <label>Дата до:</label>
-                                            <div class="input-group date" id="dateTo" data-target-input="nearest">
-                                                <input type="text" class="form-control datetimepicker-input bg-dark" data-target="#dateTo">
-                                                <div class="input-group-append datepick" data-target="#dateTo" data-toggle="datetimepicker">
-                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -416,41 +267,23 @@
                                         <h3 class="card-title">Отправить</h3>
                                     </div>
                                     <div class="card-body">
-                                        <div class="row small-box">
-                                            <button type="button" class="btn bg-cyan col-12" id="submitButton">Сохранить Тест</button>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <button type="submit" class="btn bg-cyan col-12" id="submitButton">Сохранить ссылку</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
-                    <script defer src="SearchModule.js"></script>
-                    <script defer src="dateFormat.js"></script>
-                    <script defer src="testForm.js"></script>
-                    <template id="RemoveFromQuest">
-                        <li class="splide__slide">
-                            <div class="input-group">
-                                <p class="form-control bg-dark"></p>
-                                <div class="input-group-prepend">
-                                    <button name="removeButton" type="button" class="btn bg-danger">Убрать</button>
-                                </div>
-                            </div>
-                        </li>
-                    </template>
-                    <template id="AddQuestToTest">
-                        <li class="splide__slide">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button name="removeButton" type="button" class="btn bg-cyan">Добавить</button>
-                                </div>
-                                <p class="form-control bg-dark"></p>
-                            </div>
-                        </li>
-                    </template>
+
+                    <script src=""></script>
                 </div>
             </section>
 
         </div>
+
         <footer class="main-footer bg-dark">
             <strong>Copyright &copy; 20**-20**</strong>
             All rights reserved.
@@ -468,8 +301,6 @@
         $.widget.bridge('uibutton', $.ui.button)
     </script>
 
-    <!-- Splide -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Tempusdominus Bootstrap 4 -->
@@ -477,4 +308,5 @@
     <!-- AdminLTE App -->
     <script src="static/dist/js/adminlte.js"></script>
 </body>
+
 </html>

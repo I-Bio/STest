@@ -32,7 +32,7 @@
     <script src="static/plugins/jquery-ui/jquery-ui.min.js"></script>
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed bg-dark">
     <div class="wrapper">
 
         <nav class="main-header navbar navbar-expand navbar-dark">
@@ -185,12 +185,20 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-header">Меню преподавателя</li>
+                        <li class="nav-header">Заголовок</li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon far"></i>
                                 <p>
-                                    Группы студентов
+                                    Студенты
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far"></i>
+                                <p>
+                                    Оценки
                                 </p>
                             </a>
                         </li>
@@ -199,22 +207,6 @@
                                 <i class="nav-icon far"></i>
                                 <p>
                                     Банк задач
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far"></i>
-                                <p>
-                                    Добавление дисциплины
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far"></i>
-                                <p>
-                                    Добавление темы
                                 </p>
                             </a>
                         </li>
@@ -230,7 +222,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Главная страница</h1>
+                            <h1 class="m-0 text-light">Тема</h1>
                         </div>
                     </div>
                 </div>
@@ -238,52 +230,67 @@
 
             <section class="content">
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6 col-12">
-                            <div class="small-box bg-gradient-cyan">
-                                <div class="inner">
-                                    <h3>Ещё предмет</h3>
-                                    <p>Курс</p>
-                                </div>
-                                <a href="#" class="small-box-footer bg-gradient-dark">Перейти <i
-                                        class="fas fa-arrow-circle-right"></i></a>
-                            </div>
+                    <div class="card bg-gradient-dark">
+                        <div class="card-header bg-gradient-success">
+                            <p class="m-0">Содержимое</p>
                         </div>
-                        <div class="col-lg-4 col-sm-6 col-12">
-                            <div class="small-box bg-gradient-cyan">
-                                <div class="inner">
-                                    <h3>Ещё предмет</h3>
-                                    <p>Курс</p>
+                        <div class="card-body">
+                            <div class="small-box" data-name="elementDownload">
+                                <div class="input-group ">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-success border-0">Файл</span>
+                                    </div>
+                                    <a href="#PathToFile" download="#FileName" class="text-success form-control bg-dark">
+                                        <span class="name-text">Имя</span>
+                                    </a>
                                 </div>
-                                <a href="#" class="small-box-footer bg-gradient-dark">Перейти <i
-                                        class="fas fa-arrow-circle-right"></i></a>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-12">
-                            <div class="small-box bg-gradient-cyan">
-                                <div class="inner">
-                                    <h3>Ещё предмет</h3>
-                                    <p>Курс</p>
+                            <div class="small-box" data-name="elementReference">
+                                <div class="input-group ">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-success border-0">Ссылка</span>
+                                    </div>
+                                    <a href="#PathToFile" class="text-success form-control bg-dark">
+                                        <span class="name-text">Имя</span>
+                                    </a>
                                 </div>
-                                <a href="#" class="small-box-footer bg-gradient-dark">Перейти <i
-                                        class="fas fa-arrow-circle-right"></i></a>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-12">
-                            <div class="small-box bg-gradient-cyan">
-                                <div class="inner">
-                                    <h3>Ещё предмет</h3>
-                                    <p>Курс</p>
+                            <div class="small-box" data-name="elementTest">
+                                <div class="input-group ">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-success border-0">Тест</span>
+                                    </div>
+                                    <a href="#Переход в тест" class="form-control bg-dark name-text">Имя</a>
                                 </div>
-                                <a href="#" class="small-box-footer bg-gradient-dark">Перейти <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                            <div class="small-box" data-name="elementLecture">
+                                <div class="input-group ">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-success border-0">Лекция</span>
+                                    </div>
+                                    <span class="form-control bg-dark name-text">Имя</span>
+                                </div>
+                                <div class="input-group">
+                                    <div class="form-control bg-dark border-0">
+                                        Описание/Содержание
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small-box" data-name="elementQuestion">
+                                <div class="input-group ">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-success border-0">Задание</span>
+                                    </div>
+                                    <a href="#PathToFile" class="text-success form-control bg-dark">
+                                        <span class="name-text">Имя</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-
         <footer class="main-footer bg-dark">
             <strong>Copyright &copy; 20**-20**</strong>
             All rights reserved.
@@ -296,6 +303,7 @@
         </aside>
     </div>
 
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>

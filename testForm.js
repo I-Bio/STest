@@ -18,21 +18,6 @@ var bankQuest = new Splide( '#inBank', {
 testQuest.mount();
 bankQuest.mount();
 
-$("#dateFrom").datetimepicker(
-	{
-		format: 'DD.MM.YYYY HH:mm',
-		inline: false,
-		locale: 'ru',
-	}
-);
-$("#dateTo").datetimepicker(
-	{
-		format: 'DD.MM.YYYY HH:mm',
-		inline: false,
-		locale: 'ru',
-	}
-);
-
 $('button[name="addButton"]').click(
 	function (){
 		ListContentUpdater(this, 0);
