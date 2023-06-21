@@ -9,8 +9,6 @@ let filesToUpload = new Map();
 $("#file").change(
 	function (){
 		for (let i = 0; i < this.files.length; i++){
-			//filename.value +=this.files[i].name + "\n";
-
 			if (!filesToUpload.has(this.files[i])){
 				filesToUpload.set(this.files[i].name, this.files[i]);
 
