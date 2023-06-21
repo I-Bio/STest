@@ -37,7 +37,12 @@ function RemoveFile(event){
 }
 
 function Submit(){
-	let toUpload = Array.from(filesToUpload.values());
+	let formData = new FormData();
+
+	for (let key in filesToUpload){
+		formData.append("file[]", filesToUpload[key]);
+	}
+
 
 	$.ajax({
 		url: '',
@@ -46,12 +51,12 @@ function Submit(){
 		contentType: false,
 		processData: false,
 		data: {
-			files : toUpload,
+			files : formData,
 			//csrfmiddlewaretoken: csrf,
 		},
 		dataType : 'json',
 		success: function (response){
-			console.log(2);
+			console.log(formData);
 		}
 	});
 }
