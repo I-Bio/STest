@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+    
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +33,7 @@
 
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed bg-dark">
+<body class="sidebar-mini layout-fixed bg-dark sidebar-collapse" style="height: auto;">
     <div class="wrapper">
 
         <nav class="main-header navbar navbar-expand navbar-dark">
@@ -54,8 +54,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
             <a href="index.html" class="brand-link navbar-success">
-                <img src="" alt="LOGO"
-                     class="brand-image elevation-3" style="opacity: .8">
+                <img src="" alt="LOGO" class="brand-image elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">ETS</span>
             </a>
 
@@ -68,8 +67,7 @@
                 </div>
 
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar nav-flat nav-compact nav-legacy flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
+                    <ul class="nav nav-pills nav-sidebar nav-flat nav-compact nav-legacy flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -225,7 +223,7 @@
             </div>
         </aside>
 
-        <div class="content-wrapper bg-dark">
+        <div class="content-wrapper bg-dark" style="min-height: 716.4px;">
 
             <div class="content-header">
                 <div class="container-fluid">
@@ -248,7 +246,7 @@
                         <div class="card-body bg-gradient-dark">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-6">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                         <div class="card">
                                             <div class="card-header bg-success">
                                                 <h3 class="card-title">Оценка</h3>
@@ -259,16 +257,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn bg-cyan col-12 id="submitButton" >Сохранить</button>
+                                        <button type="submit" class="btn bg-cyan col-12 id=" submitbutton"="">Сохранить</button>
                                     </div>
 
-                                    <div class="col-lg-6 col-md-8 col-xs-6 col-sm-12 text-center">
-                                        <div class="card-body pt-0">
-                                            <div class="row">
-                                                <div class="col-lg-8 col-md-10 mt-0 ">
-                                                    <button type="submit" class="btn bg-primary col-12" >Выбрать проверяющего студента</button>
+                                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                        
+                                    <div class="row">
+                                                <div class="col-12 mt-0">
+                                                    <button type="submit" class="btn bg-primary col-12">Выбрать проверяющего студента</button>
                                                 </div>
-                                                <div class="col-lg-8 col-md-10 mt-2">
+                                                <div class="col-lg-12 col-md-12 mt-2">
                                                     <ul class="list-group ">
                                                         <li class="list-group-item bg-gray-dark border border-light"><a href="" download="">Popa.exe</a></li>
                                                         <li class="list-group-item bg-gray-dark border border-light"><a href="" download="">README.txt</a></li>
@@ -277,9 +275,7 @@
                                                 </div>
 
 
-                                            </div>
-                                        </div>
-                                    </div>
+                                            </div></div>
 
                                 </div>
                             </div>
@@ -292,7 +288,7 @@
 
 
         <footer class="main-footer bg-dark">
-            <strong>Copyright &copy; 20**-20**</strong>
+            <strong>Copyright © 20**-20**</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
                 <b></b>
@@ -301,7 +297,7 @@
 
         <aside class="control-sidebar control-sidebar-dark">
         </aside>
-    </div>
+    <div id="sidebar-overlay"></div></div>
 
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
@@ -314,6 +310,8 @@
     <script src="static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- AdminLTE App -->
     <script src="static/dist/js/adminlte.js"></script>
+
+
 </body>
 
 </html>
